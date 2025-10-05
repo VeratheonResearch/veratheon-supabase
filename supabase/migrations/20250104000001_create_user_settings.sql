@@ -34,7 +34,7 @@ CREATE POLICY "Users can update own settings"
 
 CREATE POLICY "Users can insert own settings"
   ON public.user_settings
-  FOR INSERT=][l IOK[l [i on mb]]]
+  FOR INSERT
   WITH CHECK (auth.uid() = user_id);
 
 -- Create or replace the updated_at trigger function
